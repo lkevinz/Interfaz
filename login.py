@@ -13,6 +13,8 @@ from PyQt6.QtCore import Qt
 class LoginWindow(QWidget):
     def __init__(self):
         super().__init__()
+        #para cargar el UI en archivo .py
+        #loadUi('ruta del archivo .ui', self)
 
         # Configuración de la ventana
         self.setWindowTitle("Inicio de Sesión")
