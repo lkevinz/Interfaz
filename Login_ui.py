@@ -16,98 +16,60 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QLabel, QLineEdit, QMainWindow,
-    QMenuBar, QPushButton, QSizePolicy, QStatusBar,
-    QWidget)
+    QPushButton, QSizePolicy, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(443, 412)
+        MainWindow.resize(417, 423)
         sizePolicy = QSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
         MainWindow.setSizePolicy(sizePolicy)
-        MainWindow.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        MainWindow.setStyleSheet(u"\n"
-"background-color: rgb(127, 200, 100);")
+        font = QFont()
+        font.setFamilies([u"Arial"])
+        MainWindow.setFont(font)
+        MainWindow.setCursor(QCursor(Qt.CursorShape.ArrowCursor))
+        MainWindow.setStyleSheet(u"")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.label = QLabel(self.centralwidget)
-        self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(150, 20, 121, 41))
-        sizePolicy.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
-        self.label.setSizePolicy(sizePolicy)
-        font = QFont()
-        font.setFamilies([u"Segoe UI"])
-        font.setPointSize(16)
-        font.setBold(False)
-        font.setItalic(False)
-        self.label.setFont(font)
-        self.label.setCursor(QCursor(Qt.CursorShape.OpenHandCursor))
-        self.label.setAutoFillBackground(False)
-        self.label.setStyleSheet(u"color: rgb(0, 0, 0);\n"
-"font: 16pt \"Segoe UI\";\n"
-"\n"
-"")
-        self.label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.label.setMargin(-1)
-        self.password = QLineEdit(self.centralwidget)
-        self.password.setObjectName(u"password")
-        self.password.setGeometry(QRect(140, 150, 141, 22))
-        sizePolicy.setHeightForWidth(self.password.sizePolicy().hasHeightForWidth())
-        self.password.setSizePolicy(sizePolicy)
-        self.password.setCursor(QCursor(Qt.CursorShape.UpArrowCursor))
-        self.password.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
-"color: rgb(0, 0, 0);\n"
-"align: center;")
-        self.Iniciar = QPushButton(self.centralwidget)
-        self.Iniciar.setObjectName(u"Iniciar")
-        self.Iniciar.setGeometry(QRect(160, 210, 111, 41))
-        sizePolicy.setHeightForWidth(self.Iniciar.sizePolicy().hasHeightForWidth())
-        self.Iniciar.setSizePolicy(sizePolicy)
-        self.Iniciar.setCursor(QCursor(Qt.CursorShape.WhatsThisCursor))
-        self.Iniciar.setStyleSheet(u"background-color: rgb(233, 215, 255);\n"
-"color: rgb(0, 0, 0);")
-        self.Iniciar.setCheckable(False)
-        self.Iniciar.setAutoDefault(False)
-        self.Iniciar.setFlat(False)
-        self.Usuario = QLineEdit(self.centralwidget)
-        self.Usuario.setObjectName(u"Usuario")
-        self.Usuario.setGeometry(QRect(140, 100, 141, 22))
-        sizePolicy.setHeightForWidth(self.Usuario.sizePolicy().hasHeightForWidth())
-        self.Usuario.setSizePolicy(sizePolicy)
-        self.Usuario.setSizeIncrement(QSize(2, 2))
-        self.Usuario.setBaseSize(QSize(2, 2))
-        self.Usuario.setCursor(QCursor(Qt.CursorShape.UpArrowCursor))
-        self.Usuario.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
-"color: rgb(0, 0, 0);\n"
-"align: center;")
-        self.Usuario.setDragEnabled(False)
+        self.btnIniciar = QPushButton(self.centralwidget)
+        self.btnIniciar.setObjectName(u"btnIniciar")
+        self.btnIniciar.setEnabled(True)
+        self.btnIniciar.setGeometry(QRect(120, 260, 151, 51))
+        font1 = QFont()
+        font1.setFamilies([u"Franklin Gothic"])
+        font1.setPointSize(10)
+        self.btnIniciar.setFont(font1)
+        self.lineEditPasswd = QLineEdit(self.centralwidget)
+        self.lineEditPasswd.setObjectName(u"lineEditPasswd")
+        self.lineEditPasswd.setGeometry(QRect(100, 200, 201, 41))
+        self.lineEditPasswd.setMaximumSize(QSize(300, 100))
+        self.lineEditUsuario = QLineEdit(self.centralwidget)
+        self.lineEditUsuario.setObjectName(u"lineEditUsuario")
+        self.lineEditUsuario.setGeometry(QRect(100, 140, 201, 41))
+        self.lineEditUsuario.setMaximumSize(QSize(300, 100))
+        self.lineEditUsuario.setCursor(QCursor(Qt.CursorShape.ArrowCursor))
+        self.titulo = QLabel(self.centralwidget)
+        self.titulo.setObjectName(u"titulo")
+        self.titulo.setGeometry(QRect(100, 90, 201, 31))
+        self.titulo.setFont(font)
+        self.titulo.setFocusPolicy(Qt.FocusPolicy.NoFocus)
+        self.titulo.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
+        self.titulo.setTextFormat(Qt.TextFormat.AutoText)
+        self.titulo.setAlignment(Qt.AlignmentFlag.AlignCenter)
         MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QMenuBar(MainWindow)
-        self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 443, 33))
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QStatusBar(MainWindow)
-        self.statusbar.setObjectName(u"statusbar")
-        MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-
-        self.Iniciar.setDefault(True)
-
 
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Inicio de sesi\u00f3n", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"Login ERP", None))
-        self.password.setText(QCoreApplication.translate("MainWindow", u"CONTRASE\u00d1A", None))
-        self.Iniciar.setText(QCoreApplication.translate("MainWindow", u"Iniciar sesi\u00f3n", None))
-        self.Usuario.setText(QCoreApplication.translate("MainWindow", u"USUARIO", None))
-        self.Usuario.setPlaceholderText("")
+        self.btnIniciar.setText(QCoreApplication.translate("MainWindow", u"Inicio", None))
+        self.titulo.setText(QCoreApplication.translate("MainWindow", u"LOGIN ERP", None))
     # retranslateUi
 
