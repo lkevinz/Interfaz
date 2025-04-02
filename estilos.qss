@@ -1,6 +1,6 @@
-password { border: 10px; 
+.QLineEdit { border: 10px; 
                     background-color: pink;
-                      color: green;
+                      color: rgb(128, 81, 0);
                       margin: 10px;
-                      font-family: "password";}
+                    }
                       
