@@ -1,4 +1,5 @@
-QLineEdit.input { border: 10px; 
+.password { border: 10px; 
+                    background-color: pink;
                       color: green;
                       margin: 10px;
                       font-family: "password";}
