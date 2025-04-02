@@ -45,6 +45,7 @@ class Ui_MainWindow(object):
         self.btnIniciar.setFont(font1)
         self.lineEditPasswd = QLineEdit(self.centralwidget)
         self.lineEditPasswd.setObjectName(u"lineEditPasswd")
+        self.lineEditPasswd.setEchoMode(QLineEdit.Password)
         self.lineEditPasswd.setGeometry(QRect(100, 200, 201, 41))
         self.lineEditPasswd.setMaximumSize(QSize(300, 100))
         self.lineEditUsuario = QLineEdit(self.centralwidget)

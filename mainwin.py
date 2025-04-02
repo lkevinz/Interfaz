@@ -16,6 +16,7 @@ ventana.setFixedSize(ventana.size())
 with open("estilos.qss", "r") as file:
     app.setStyleSheet(file.read())
 
+
 # Mostrar la ventana
 ventana.show()
 
