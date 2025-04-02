@@ -1,6 +1,6 @@
 .QLineEdit { border: 10px; 
                     background-color: pink;
                       color: rgb(128, 81, 0);
-                      margin: 10px;
+                      margin: 50px;
                     }
                       
