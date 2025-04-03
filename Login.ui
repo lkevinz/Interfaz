@@ -54,11 +54,6 @@
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEditPasswd">
-     
-     <property name="echoMode"> <!-- contraseña-->
-        <enum>QLineEdit::Password</enum>
-    </property>
-    
     <property name="geometry">
      <rect>
       <x>100</x>
@@ -72,6 +67,9 @@
       <width>300</width>
       <height>100</height>
      </size>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::EchoMode::Password</enum>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEditUsuario">

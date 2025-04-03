@@ -28,5 +28,3 @@ QLabel#titulo {
 QMainWindow {
   background-color: bisque;
 }
-
-
