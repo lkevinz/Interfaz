@@ -10,7 +10,13 @@ QPushButton#btnIniciar {
   background-color: #54a174;
   color: white;
   border-radius: 15px;
+  transition: background-color 0.3s ease-in-out;
 }
+
+QPushButton#btnIniciar:hover {
+  background-color: #6e6e6e;
+}
+
 
 QLabel#titulo {
   font: bold;
