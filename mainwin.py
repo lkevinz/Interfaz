@@ -17,7 +17,7 @@ ventana.setFixedSize(ventana.size())
 with open("Style/estilos.qss", "r") as file:
     app.setStyleSheet(file.read())
 
-# Vincular las animaciones correctamente
+# Vincular las animaciones 
 ventana.btnIniciar.enterEvent = lambda event: ventana.animEnter.start()
 ventana.btnIniciar.leaveEvent = lambda event: ventana.animLeave.start()
 
