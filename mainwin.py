@@ -29,3 +29,4 @@ ventana.animLeave = animation.reset_button(ventana.btnIniciar)
 ventana.show()
 
 sys.exit(app.exec())
+

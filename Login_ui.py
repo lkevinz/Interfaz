@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'Login.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.8.3
+## Created by: Qt User Interface Compiler version 6.9.0
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -61,6 +61,9 @@ class Ui_MainWindow(object):
         self.titulo.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
         self.titulo.setTextFormat(Qt.TextFormat.AutoText)
         self.titulo.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.pushButton = QPushButton(self.centralwidget)
+        self.pushButton.setObjectName(u"pushButton")
+        self.pushButton.setGeometry(QRect(180, 30, 75, 24))
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -72,5 +75,6 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Inicio de sesi\u00f3n", None))
         self.btnIniciar.setText(QCoreApplication.translate("MainWindow", u"Inicio", None))
         self.titulo.setText(QCoreApplication.translate("MainWindow", u"LOGIN ERP", None))
+        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
     # retranslateUi
 
